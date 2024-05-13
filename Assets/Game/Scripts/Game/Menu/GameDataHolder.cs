@@ -3,13 +3,13 @@ namespace Game.Scripts.Game.Menu
 {
     public static class GameDataHolder
     {
-        // private static PlaceData _placeData;
-        //
-        // public static PlaceData PlaceData => _placeData;
-        //
-        // public static void SetPlaceData(PlaceData placeData)
-        // {
-        //     _placeData = placeData;
-        // }
+        private static GameData _gameData;
+        
+        public static GameData GameData => _gameData;
+        
+        public static void SetGameData(GameData gameData)
+        {
+            _gameData = gameData;
+        }
     }
 }

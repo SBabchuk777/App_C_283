@@ -217,7 +217,7 @@ MonoBehaviour:
     _value: 0
     _color: {r: 1, g: 1, b: 1, a: 1}
     _colors: []
-    _sprite_0: {fileID: 21300000, guid: 069b139174ae94050819ace16e5d19fb, type: 3}
+    _sprite_0: {fileID: 21300000, guid: e222c1f8d7d30460293c69da643a6af6, type: 3}
     _sprite_1: {fileID: 0}
     _sprite_2: {fileID: 0}
     _sprite_3: {fileID: 0}
@@ -226,7 +226,7 @@ MonoBehaviour:
     _value: 0
     _color: {r: 1, g: 1, b: 1, a: 1}
     _colors: []
-    _sprite_0: {fileID: 21300000, guid: db388a34a352c41cc90b6ac3367096db, type: 3}
+    _sprite_0: {fileID: 21300000, guid: a20f884703f444f64a8b6e38e2f3d058, type: 3}
     _sprite_1: {fileID: 0}
     _sprite_2: {fileID: 0}
     _sprite_3: {fileID: 0}
@@ -433,7 +433,7 @@ MonoBehaviour:
     _value: 12
     _color: {r: 0, g: 0, b: 0, a: 1}
     _colors: []
-    _sprite_0: {fileID: 21300000, guid: 13259af0f824f450ea16af81fa0e5686, type: 3}
+    _sprite_0: {fileID: 21300000, guid: bd374b6fa50ac443091339a77d56eaa0, type: 3}
     _sprite_1: {fileID: 0}
     _sprite_2: {fileID: 0}
     _sprite_3: {fileID: 0}

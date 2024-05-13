@@ -9,18 +9,8 @@ namespace Game.Scripts.Game.CardGameLogic
         public List<Card> Cards;
         public List<CardData> CardsData;
 
-        private List<CardData> _availableCards;
-        private CardData _targetCardData;
-
-        public void Initialize()
-        {
-            _availableCards = new List<CardData>(CardsData);
-        }
-
-        public void PlayStartAnimation()
-        {
-            foreach (var card in Cards) card.PlayCloseOpenAnimation();
-        }
+        private Card _selectedCard;
+        public Card SelectedCard => _selectedCard;
 
         public void EnableButtonCards(bool enable, Card nonDisable= null)
         {
@@ -33,21 +23,25 @@ namespace Game.Scripts.Game.CardGameLogic
             }
         }
 
-        public void RemoveAvailableCardData(CardData cardData) =>
-            _availableCards.Remove(cardData);
-
-        public CardData GetAvailableCardData()
+        public void ShuffleCardsBySpecial()
         {
-            int randomIndex = Random.Range(0, _availableCards.Count);
-            return _availableCards[randomIndex];
+            var cardsData = GetRandomCardsData();
+            var cardsUI = GetRandomCardsUI();
+            for (int i = 0; i < cardsUI.Count; i++)
+            {
+                cardsUI[i].SetCardData(cardsData[i]);
+            }
         }
-
+        
         public List<CardData> GetRandomCardsData() =>
             CardsData.OrderBy(x => Random.value).ToList();
+        
+        public List<Card> GetRandomCardsUI() =>
+            Cards.OrderBy(x => Random.value).ToList();
 
-        public void SetTargetCardData(CardData cardData) =>
-            _targetCardData = cardData;
+        public void SetSelectedCardData(Card cardData) =>
+            _selectedCard = cardData;
 
-        public bool HasPair(CardData cardData) => cardData == _targetCardData;
+        public bool HasPair(Card card) => card.CardData == _selectedCard.CardData;
     }
 }

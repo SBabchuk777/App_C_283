@@ -31,8 +31,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5291561882961586081}
   - {fileID: 3101910057175514610}
+  - {fileID: 5291561882961586081}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -91,9 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdfee366d78c34716ab56fadd8ea674e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateDuration: 2
-  CloseImage: {fileID: 2602928763107826551}
-  OpenImage: {fileID: 8411360804824143887}
+  RotateDuration: 0.6
+  CloseImage: {fileID: 8411360804824143887}
+  OpenImage: {fileID: 2602928763107826551}
   Button: {fileID: 6653002023924509363}
   CardData: {fileID: 0}
 --- !u!1 &3122345222424627959
@@ -108,12 +108,12 @@ GameObject:
   - component: {fileID: 2743531430856349899}
   - component: {fileID: 2602928763107826551}
   m_Layer: 5
-  m_Name: Close
+  m_Name: Open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3101910057175514610
 RectTransform:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4138540494611710458}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -185,12 +185,12 @@ GameObject:
   - component: {fileID: 8411360804824143887}
   - component: {fileID: 6653002023924509363}
   m_Layer: 5
-  m_Name: Open
+  m_Name: Close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5291561882961586081
 RectTransform:
   m_ObjectHideFlags: 0
@@ -204,7 +204,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4138540494611710458}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d77451cc9f03e46d18bdc6b2a24ad965, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25ef3b816757e44f2b551713f5604a31, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

@@ -27,6 +27,8 @@ namespace CodeHub.OtherUtilities
         private const string recordCountAlias = "recordCountAlias";
 
         private int bonusCooldownHours = 24;
+        
+        public int BonusCooldownHours => bonusCooldownHours;
 
         public event Action<int> OnPlayerBalanceChange;
         public event Action<int> OnPlayerMoneyChange;
@@ -171,6 +173,15 @@ namespace CodeHub.OtherUtilities
             PlayerPrefs.SetString(bonusGameAlias, DateTime.Now.ToString());
             PlayerPrefs.Save();
         }
+        
+        public DateTime GetLasBonusClaimedTime()
+        {
+            string lastBonusDateStr = PlayerPrefs.GetString(bonusGameAlias);
+            DateTime lastBonusDate = DateTime.Parse(lastBonusDateStr);
+            return lastBonusDate;
+        }
+        
+        public bool HasBonusClaimData() => PlayerPrefs.HasKey(bonusGameAlias);
 
         public bool HasBonusGame()
         {
@@ -181,7 +192,7 @@ namespace CodeHub.OtherUtilities
 
                 // Перевірка часу
                 TimeSpan timeSinceLastBonus = DateTime.Now - lastBonusDate;
-                if (timeSinceLastBonus.TotalHours >= bonusCooldownHours)
+                if (timeSinceLastBonus.TotalMinutes >= bonusCooldownHours*60)
                 {
                     // Бонус доступний
                     return true;

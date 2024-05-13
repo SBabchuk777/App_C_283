@@ -9,14 +9,14 @@ namespace Slots.Game.Values
 
         public static int Money
         {
-            get => PlayerPrefs.GetInt("playerBalanceAlias", 0);
+            get => PlayerPrefs.GetInt("playerBalanceAlias", 5000);
 
             private set
             {
                 if (value > 999999999)
                     value = 999999999;
                 
-                PlayerPrefs.SetInt("WalletMoney", value);
+                PlayerPrefs.SetInt("playerBalanceAlias", value);
                 PlayerPrefs.Save();
 
                 OnChangedMoney?.Invoke(value);

@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 440f0753f8f040e0990164d7e6796ed6, type: 3}
   m_Name: CardData2
   m_EditorClassIdentifier: 
-  NormalIcon: {fileID: 21300000, guid: a5e913764d57942f8b9e5362a9ecc490, type: 3}
-  FadeIcon: {fileID: 21300000, guid: c457e92e050564e27943a3f976fea42e, type: 3}
+  OpenIcon: {fileID: 21300000, guid: 14e3f08a3051e4f6e861ecf55586723b, type: 3}

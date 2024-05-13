@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ea41e5c1e447d9a034c4f2f3eeef7d, type: 3}
+  m_Name: Slot1
+  m_EditorClassIdentifier: 
+  NormalIcon: {fileID: 21300000, guid: 4756f2877c4954f4293fb6fe2fdd11f1, type: 3}
+  FadeIcon: {fileID: 21300000, guid: 391dee8b393ee472796330464ac74184, type: 3}
