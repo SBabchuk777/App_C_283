@@ -9,7 +9,7 @@ namespace Slots.Game.Values
 
         public static int Money
         {
-            get => PlayerPrefs.GetInt("playerBalanceAlias", 5000);
+            get => PlayerPrefs.GetInt("playerBalanceAlias", 500);
 
             private set
             {

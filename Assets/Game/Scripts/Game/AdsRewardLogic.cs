@@ -10,6 +10,7 @@ namespace Game.Scripts.Game
     {
         public UnityAdsButton AdsBtn;
         public PanelMachine PanelMachine;
+        public AudioSource WinAudio;
         public int Reward;
 
         private void Start()
@@ -26,6 +27,7 @@ namespace Game.Scripts.Game
         {
             Wallet.AddMoney(Reward);
             PanelMachine.CloseLastPanel();
+            WinAudio.Play();
         }
     }
 }

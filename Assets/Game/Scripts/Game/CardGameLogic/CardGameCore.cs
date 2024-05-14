@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using CodeHub.OtherUtilities;
 using DG.Tweening;
 using TMPro;
@@ -19,6 +20,7 @@ namespace Game.Scripts.Game.CardGameLogic
 
         [SerializeField] private AudioSource _rightPair;
         [SerializeField] private AudioSource _wrongPair;
+        [SerializeField] private AudioSource _click;
 
         private bool _canClick;
         private AnimationService _animationService;
@@ -28,6 +30,8 @@ namespace Game.Scripts.Game.CardGameLogic
         private int _triesCount;
         private int _maxPairsToWin;
         private int _maxTries;
+
+        private List<CardData> _winCards;
 
         private float ActionDelay = 1.2f;
 
@@ -43,6 +47,7 @@ namespace Game.Scripts.Game.CardGameLogic
             _pairsCount = 0;
             _maxPairsToWin = 3;
             _maxTries = 4;
+            _winCards = new List<CardData>();
 
             SubscribeEvents();
 
@@ -63,6 +68,8 @@ namespace Game.Scripts.Game.CardGameLogic
         {
             if (!_canClick)
                 return;
+
+            _click.Play();
 
             StartTutorial.SetActive(false);
             Counters.SetActive(true);
@@ -109,6 +116,7 @@ namespace Game.Scripts.Game.CardGameLogic
         private void RightPair(Card card)
         {
             _pairsCount++;
+            _winCards.Add(card.CardData);
 
             _rightPair.Play();
 
@@ -157,7 +165,7 @@ namespace Game.Scripts.Game.CardGameLogic
         {
             if (HasTriesMax || HasCollectMax)
             {
-                CardGameOverContext.AddWin();
+                CardGameOverContext.AddEndGame(_winCards);
             }
 
             UpdateTriesCountTxt();
