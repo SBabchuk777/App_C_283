@@ -66,7 +66,9 @@ namespace Slots.Game.Interface
             var format = new NumberFormatInfo { NumberGroupSeparator = " " };
 
             _counterTween = DOVirtual.Int(int.Parse(_text.text.Replace(" ", "")), count, 0.35f,
-                (value) => _text.text = value.ToString("#,0", format)).Play();
+                (value) => _text.text = value.ToString("#,0", format))
+                .OnComplete(() => _text.text = count.ToString("#,0", format))
+                .Play();
         }
     }
 }

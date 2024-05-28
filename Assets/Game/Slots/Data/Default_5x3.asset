@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Default_5x3
   m_EditorClassIdentifier: 
   _fieldSize: {x: 5, y: 3}
-  _slots: {fileID: 11400000, guid: 0eea55ee8172440f3a6f1f753e4931d8, type: 2}
-  _styleData: {fileID: 11400000, guid: eb33968ea1c5940779c5882de065042f, type: 2}
+  _maxBet: 100
   _combinations:
   - _columns:
     - _cells: 010000
