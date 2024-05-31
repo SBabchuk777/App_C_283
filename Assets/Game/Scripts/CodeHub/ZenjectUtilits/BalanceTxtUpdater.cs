@@ -1,3 +1,4 @@
+using System.Globalization;
 using CodeHub.OtherUtilities;
 using TMPro;
 using UnityEngine;
@@ -25,7 +26,15 @@ namespace Game.Scripts.CodeHub.ZenjectUtilits
         private void OnDestroy() => 
             _playerDatabase.OnPlayerBalanceChange -= UpdateBalanceTxt;
 
-        private void UpdateBalanceTxt(int count) =>
-            _balanceTxt.text = count.ToString();
+        private void UpdateBalanceTxt(int count)
+        {
+            var nfi = new NumberFormatInfo
+            {
+                NumberGroupSeparator = " ",
+                NumberDecimalDigits = 0
+            };
+    
+            _balanceTxt.text = count.ToString("N", nfi);
+        }
     }
 }
